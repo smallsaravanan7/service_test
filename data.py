@@ -38,7 +38,6 @@ def auth(f):
             clientToken=(token_decode['user'],)
             data=databaseConn(clientTokenCom,clientToken)
             # conn.commit()
-            # conn.close()
             if data[2] != token:
                  return jsonify({"emsg":"Token not valid"})
         except Exception as error:
